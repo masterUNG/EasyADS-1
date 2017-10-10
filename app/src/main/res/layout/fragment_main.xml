@@ -7,7 +7,7 @@
     <!--content-->
     <LinearLayout
         android:orientation="vertical"
-        android:layout_margin="@dimen/margin">
+        android:layout_margin="@dimen/margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -21,7 +21,44 @@
 
 
         <!--App NAME-->
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="@dimen/h1"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
         <!--User-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--<Icon -->
+            <ImageView
+                android:src="@mipmap/ic_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--<User-->
+            <EditText
+                android:textColorHint="@color/colorPrimaryLigth"
+                android:textColor="@color/colorPrimaryDark"
+                android:inputType="text"
+                android:hint="@string/user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
         <!--Password-->
         <!--button-->
         <!--New Register-->
