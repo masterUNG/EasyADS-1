@@ -6,6 +6,7 @@
 
     <!--content-->
     <LinearLayout
+        android:padding="16dp"
         android:orientation="vertical"
         android:layout_margin="@dimen/margin"
         android:layout_width="match_parent"
@@ -79,13 +80,26 @@
                 android:hint="@string/pw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
         </LinearLayout>
 
 
-
         <!--button-->
+        <Button
+            android:textColor="@color/white"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <!--New Register-->
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            android:textSize="@dimen/h2"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/new_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
 
 
