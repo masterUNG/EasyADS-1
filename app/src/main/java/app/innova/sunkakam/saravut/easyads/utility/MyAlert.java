@@ -21,7 +21,7 @@ public class MyAlert {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setCancelable(false);
-        builder.setIcon(R.drawable.ic_alert);
+        builder.setIcon(R.drawable.ic_alert2);
         builder.setTitle(strTitle);
         builder.setMessage(strMessage);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
