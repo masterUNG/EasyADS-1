@@ -7,6 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import app.innova.sunkakam.saravut.easyads.MainActivity;
 import app.innova.sunkakam.saravut.easyads.R;
@@ -16,6 +18,10 @@ import app.innova.sunkakam.saravut.easyads.R;
  */
 
 public class RegisterFragment extends Fragment {
+
+    //Explecit
+    private String nameString, userString, passwordString;
+
 
     @Nullable
     @Override
@@ -40,20 +46,35 @@ public class RegisterFragment extends Fragment {
         ((MainActivity) getActivity()).setSupportActionBar(toolbar);
 
         //Set Up Title
-        ((MainActivity)getActivity()).setTitle(getString(R.string.new_register));
+        ((MainActivity) getActivity()).setTitle(getString(R.string.new_register));
 
         //Back Controller
-        ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
-        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ((MainActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().popBackStack();
+
             }
         });
 
+//Save Controller
+        ImageView imageView = getView().findViewById(R.id.imvSave);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+// Get Value From EditText
+                EditText nameEditText = getView().findViewById(R.id.edtName);
+                EditText userEditText = getView().findViewById(R.id.edtUser);
+                EditText passwordEditText = getView().findViewById(R.id.edtPassword);
+
+
+
+            }  //onClick
+        });
 
     }
-}
+}  //Main Class
 
