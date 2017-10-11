@@ -12,6 +12,7 @@ import android.widget.ImageView;
 
 import app.innova.sunkakam.saravut.easyads.MainActivity;
 import app.innova.sunkakam.saravut.easyads.R;
+import app.innova.sunkakam.saravut.easyads.utility.MyAlert;
 
 /**
  * Created by USER on 10/10/2560.
@@ -70,6 +71,17 @@ public class RegisterFragment extends Fragment {
                 EditText userEditText = getView().findViewById(R.id.edtUser);
                 EditText passwordEditText = getView().findViewById(R.id.edtPassword);
 
+                //Change Data Type
+                nameString = nameEditText.getText().toString().trim();
+                userString = userEditText.getText().toString().trim();
+                passwordString = passwordEditText.getText().toString().trim();
+
+                //Check Space
+                if (nameString.equals("") || userString.equals("") || passwordString.equals("")) {
+                    // Have Space
+                    MyAlert myAlert = new MyAlert(getActivity());
+                    myAlert.myDialog("Have Space", "Please Fill All Every Blank");
+                }
 
 
             }  //onClick
