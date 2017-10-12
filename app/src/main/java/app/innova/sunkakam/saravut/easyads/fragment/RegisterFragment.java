@@ -155,6 +155,8 @@ public class RegisterFragment extends Fragment {
         String strPathImage = "";
         String[] strings = new String[]{MediaStore.Images.Media.DATA};
         Cursor cursor = getActivity().getContentResolver().query(uri, strings, null, null, null);
+        Log.d(tag, "uploadWorking");
+
 
         if (cursor != null) {
 
